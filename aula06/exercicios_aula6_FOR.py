@@ -1,5 +1,14 @@
+# 01 - Dado uma string com uma frase informada pelo usuário (incluindo espaços em branco), conte
+# quantas vezes aparece as vogais a,e,i,o,u
+palavra = input("Digite uma palavra: ")
+contador = 0
 
+for letra in palavra:
+    if letra in "aeiouAEIOU":
+        contador += 1
 
+print(palavra)
+print(f'A frase tem {contador} vogais ')
 
 
 
