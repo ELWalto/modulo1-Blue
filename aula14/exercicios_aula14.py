@@ -1,78 +1,68 @@
 # Exercícios
 
-# 1.	Faça um programa, com uma função que necessite de três argumentos, e que forneça a soma desses três argumentos.
+#  1.	Faça um programa, com uma função que necessite de três argumentos, e que forneça a soma desses três argumentos.
 
-# def somar(num1,num2,num3): # definindo uma função
-#     '''
-#     pede dois numeros para o usuario e printa o resultado da soma dos dois # aqui defino o help para saber o que a funcao faz
-#     '''
-#     soma = num1 + num2 + num3
-#     print(f'a soma dos numeros {num1} , {num2} e {num3} é {soma} ')
-# a = 10
-# b = 20
-# c = 30
-# somar(a,b,c)
+def somar(num1,num2,num3): # definindo uma função
+    '''
+    pede três numeros para o usuario e printa o resultado da soma  # aqui defino o help para saber o que a funcao faz
+    '''
+    soma = num1 + num2 + num3
+    print(f'a soma dos numeros {num1} , {num2} e {num3} é {soma} ')
+a = 10
+b = 20
+c = 30
+somar(a,b,c)
 
 
 # 2.	 Faça um programa, com uma função que necessite de um argumento. A função retorna o valor de caractere ‘P’, se seu argumento for positivo, ‘N’, se seu argumento for negativo e ‘0’ se for 0.
 
-# def positiva (numero):
-#     if numero > 0:
-#         return 'P'
-#     elif numero < 0:
-#         return 'N'
-#     else:
-#         return 0
-# n = int(input(' Informe um número: '))
-# print(positiva(n))
+def positiva (numero):
+    if numero > 0:
+        return 'P'
+    elif numero < 0:
+        return 'N'
+    else:
+        return 0
+n = int(input(' Informe um número: '))
+print(positiva(n))
 
 
 # 3.	 Faça um programa com uma função chamada somaImposto. A função possui dois parâmetros formais: taxaImposto, que é a quantia de imposto sobre vendas expressa em porcentagem e custo, que é o custo de um item antes do imposto. A função “altera” o valor de custo para incluir o imposto sobre vendas.
 
-# def somaImposto (taxaImposto , custo):
-#     taxaImposto = custo * taxaImposto/100
-#     preco_venda = custo + taxaImposto
-#     return preco_venda
-# valorProduto = float(input(' Digite o valor do produto: ').replace(',','.'))
-# valorTaxa = float(input(' Digite o valor da taxa: ').replace(',','.'))
-# print(f'O preço de venda será : {somaImposto(valorTaxa,valorProduto)} ')
+def somaImposto (taxaImposto , custo):
+    taxaImposto = custo * taxaImposto/100
+    preco_venda = custo + taxaImposto
+    return preco_venda
+valorProduto = float(input(' Digite o valor do produto: ').replace(',','.'))
+valorTaxa = float(input(' Digite o valor da taxa: ').replace(',','.'))
+print(f'O preço de venda será : {somaImposto(valorTaxa,valorProduto)} ')
 
 
 
 # 4.	Faça um programa que calcule o salário de um colaborador na empresa XYZ. O salário é pago conforme a quantidade de horas trabalhadas. Quando um funcionário trabalha mais de 40 horas ele recebe um adicional de 1.5 nas horas extras trabalhadas.
 
-# def salario (valorhora,qthoras):
-#     if qthoras <= 40:
-#         salario = valorhora*qthoras
+def salario (valorhora,qthoras):
+    if qthoras <= 40:
+        salario = valorhora*qthoras
     
-#     else:
-#         horaextra = qthoras-40 
-#         valorhoraextra = valorhora + valorhora *1.5/100
-#         salario = valorhora * 40 + valorhoraextra * horaextra
+    else:
+        horaextra = qthoras-40 
+        valorhoraextra = valorhora + valorhora *1.5/100
+        salario = valorhora * 40 + valorhoraextra * horaextra
 
-#     return salario
-# horas = int(input('Informe a quantidade de horas trabalhadas :'))
-# cascalho = float(input(' Informe o valor da hora trabalhada :'))
-# print(salario (cascalho ,horas))
-
-
-    
-
-         
-
-
-
-
-
+    return salario
+horas = int(input('Informe a quantidade de horas trabalhadas :'))
+cascalho = float(input(' Informe o valor da hora trabalhada :'))
+print(salario (cascalho ,horas))
 
 # 5.	Faça um programa que calcule através de uma função o IMC de uma pessoa que tenha 1,68 e pese 75kg.
 
-# def imc():
-#     a = 1.68**2
-#     b = 75 
-#     return round(b/a,2) # Round arredonda a quantidade de casas depois da virgula
+def imc():
+    a = 1.68**2
+    b = 75 
+    return round(b/a,2) # Round arredonda a quantidade de casas depois da virgula
 
-# print(imc())
+print(imc())
 
 
 # 6.	Escreva uma função que, dado um número nota representando a nota de um estudante, converte o valor de nota para um conceito (A, B, C, D, E e F).
@@ -84,39 +74,35 @@
 # > 4.0 E 
 # <=4.0	F
 
-# def nota (a):
-#     if a >= 9:
-#         return "NOTA'A'"
-#     elif a >= 8:
-#         return "NOTA'B"
-#     elif a >= 7:
-#         return "NOTA'C'"
-#     elif a >= 6:
-#         return "NOTA'D'"
-#     elif a > 4:
-#         return "NOTA'E'"
-#     else:
-#         return "NOTA 'F'"
-# boletim = float(input('Informe o valor da sua nota: ').replace(',','.'))
+def nota (a):
+    if a >= 9:
+        return "NOTA'A'"
+    elif a >= 8:
+        return "NOTA'B"
+    elif a >= 7:
+        return "NOTA'C'"
+    elif a >= 6:
+        return "NOTA'D'"
+    elif a > 4:
+        return "NOTA'E'"
+    else:
+        return "NOTA 'F'"
+boletim = float(input('Informe o valor da sua nota: ').replace(',','.'))
 
-# print(nota(boletim))
+print(nota(boletim))
 
 
 # 7.	Escreva uma função que recebe dois parâmetros e imprime o menor dos dois. Se eles forem iguais, imprima que eles são iguais.
 
-# def comparacao(a,b):
-#     if a == b:
-#         return 'Iguais'
-#     lista = [a,b]
-#     menor = min(lista)
-#     return menor 
-# num1 = int(input('Informe o primeiro valor: '))
-# num2 = int(input('Informe o segundo valor '))
-# print(comparacao(num1,num2))
-
-
-
-
+def comparacao(a,b):
+    if a == b:
+        return 'Iguais'
+    lista = [a,b]
+    menor = min(lista)
+    return menor 
+num1 = int(input('Informe o primeiro valor: '))
+num2 = int(input('Informe o segundo valor '))
+print(comparacao(num1,num2))
 
 
 # DESAFIO -  Data com mês por extenso. Construa uma função que receba uma data no formato DD/MM/AAAA e devolva uma string no formato D de mesPorExtenso de AAAA. Opcionalmente, valide a data e retorne NULL caso a data seja inválida. Considere que Fevereiro tem 28 dias e que a cada 4 anos temos ano bisexto, sendo que nesses casos Fevereiro terá 29 dias.
